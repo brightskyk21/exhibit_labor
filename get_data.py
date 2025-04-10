@@ -33,6 +33,27 @@ def get_kosis_data(data_key: str) -> pd.DataFrame:
     if response.status_code == 200:
         data = response.json()
         df = pd.DataFrame(data)
+
+        # 데이터 전처리
+        if data_key == "업종별":
+            # 업종별 데이터 전처리 코드
+            pass
+        elif data_key == "연령별":
+            # 연령별 데이터 전처리 코드
+            pass
+        elif data_key == "재해정도":
+            # 재해정도 데이터 전처리 코드
+            pass
+        elif data_key == "시간별":
+            # 시간별 데이터 전처리 코드
+            pass
+        elif data_key == "입사근속기간별":
+            # 입사근속기간별 데이터 전처리 코드
+            pass
+        elif data_key == "발생형태별":
+            # 발생형태별 데이터 전처리 코드
+            pass
+
         return df
     else:
         raise Exception(f"API 요청 실패 (status {response.status_code})")
